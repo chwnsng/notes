@@ -58,3 +58,10 @@ func strc() {
 	fmt.Println(myEngine2)
 
 }
+
+// using structs with JSON encoders/decoders
+// add struct tags to define each json field name
+type LoginRequest struct {
+	Username string `json:"username"` // will look for field name "username" when decoding from json
+	Password string `json:"password"`
+}

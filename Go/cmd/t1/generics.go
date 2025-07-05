@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func generic() {
 	intSlice := []int{1, 2, 3}
@@ -39,4 +41,20 @@ type car[T gasEngine | electricEngine] struct {
 	manufacturer string
 	model        string
 	engine       T
+}
+
+func assert() {
+	// type assertion
+	// when a variable is an interface{} aka "any" type,
+	// and we sespect that the value it holds might satisfy as a certain type
+	// we can check if that's true by asserting it
+	var i interface{} = 12
+	h, ok := i.(string) // Type assertion: checks if i holds a string
+	// if yes, store it in h and ok=ture
+	// if no, h will have an empty value
+
+	if ok {
+		fmt.Println("h is a string")
+	}
+	fmt.Println(h)
 }

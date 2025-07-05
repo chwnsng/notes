@@ -10,7 +10,8 @@ func main() {
 	// ch2()
 	// grt()
 	// bestDeal()
-	generic()
+	// generic()
+	assert()
 
 }
 

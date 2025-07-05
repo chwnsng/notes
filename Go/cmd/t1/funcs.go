@@ -5,11 +5,14 @@ import (
 	"fmt"
 )
 
+// private funcs start with lowercase (scope=package)
 func ch2() {
 	fmt.Println("Hey there")
 }
 
-func printme(text string) {
+// public funcs start with uppercase (scope=any package)
+// other packages can import this function
+func Printme(text string) {
 	fmt.Println(text)
 }
 
